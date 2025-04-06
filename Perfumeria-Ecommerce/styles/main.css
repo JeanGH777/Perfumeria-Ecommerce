@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f1e9; /* Fondo beige claro para calidez */
+    color: #333; /* Texto principal oscuro pero no negro puro */
+}
+
+header {
+    background-color: #1a1a2e; /* Azul noche profundo */
+    color: #e6d5b8; /* Dorado claro para texto */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d4af37; /* Dorado metálico para el logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #e6d5b8; /* Tonos dorados para los enlaces */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #d4af37; /* Dorado más brillante al pasar el mouse */
+}
+
+.hero {
+    background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), 
+                url('ruta-a-imagen-dubai.jpg') no-repeat center center;
+    background-size: cover;
+    color: #e6d5b8;
+    text-align: center;
+    padding: 100px 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.productos-destacados {
+    padding: 50px 20px;
+    background-color: #f5f1e9;
+}
+
+.productos-destacados h2 {
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto {
+    border: 1px solid #d4af37; /* Borde dorado */
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #1a1a2e;
+    color: #e6d5b8;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Cambiado de fixed a relative para mejor flujo */
+    margin-top: 50px;
+}
+
+/* Añade esto para el efecto de lujo */
+::selection {
+    background-color: #d4af37;
+    color: white;
+}

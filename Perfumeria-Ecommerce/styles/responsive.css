@@ -1,0 +1,193 @@
+/* Estilos base para móviles (Mobile First) */
+@media screen and (max-width: 767px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    header .logo {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+    }
+    
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Hero Banner */
+    .hero {
+        padding: 40px 15px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .hero h1 {
+        font-size: 1.8em;
+        margin: 0 auto 15px;
+        max-width: 90%;
+    }
+    
+    .hero p {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    /* Productos */
+    .productos-destacados {
+        padding: 30px 15px;
+    }
+    
+    .grid-productos {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .producto {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px;
+        font-size: 0.9em;
+        position: relative;
+        margin-top: 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Ajustes generales para móviles */
+    body {
+        overflow-x: hidden;
+        padding-bottom: 0;
+    }
+    
+    img, video, iframe {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Header */
+    header {
+        padding: 15px 20px;
+    }
+    
+    header nav ul {
+        gap: 12px;
+        flex-direction: row;
+    }
+    
+    /* Hero Banner */
+    .hero {
+        padding: 80px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    
+    /* Productos */
+    .grid-productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 95%;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 20px;
+    }
+}
+
+/* Desktop (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+    /* Ajustes generales para pantallas grandes */
+    body {
+        font-size: 1.05em;
+    }
+    
+    /* Header */
+    header {
+        padding: 15px 5%;
+    }
+    
+    /* Hero Banner */
+    .hero {
+        padding: 100px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    
+    /* Productos */
+    .grid-productos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 25px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (ej: iPhone SE) */
+@media screen and (max-width: 374px) {
+    header .logo {
+        font-size: 1.1em;
+    }
+    
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    
+    .hero p {
+        font-size: 0.9em;
+    }
+    
+    .producto {
+        padding: 10px;
+    }
+}
+
+/* Ajustes especiales para elementos específicos */
+@media screen and (max-width: 1023px) {
+    /* Asegurar que el footer no tape contenido */
+    footer {
+        position: relative;
+        margin-top: 40px;
+    }
+    
+    /* Prevenir desbordamiento horizontal */
+    body, section, header, footer {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    /* Ajustar textos largos */
+    p, h1, h2, a {
+        word-wrap: break-word;
+    }
+}
