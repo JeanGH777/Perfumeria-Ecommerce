@@ -1,79 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="../styles/carrito.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="../styles/carrito.css" />
 </head>
 <body>
+  <header>
+    <div class="logo">✨ Perfumería Dubái</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="carrito.html">Carrito 🛒</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">✨  Perfumería Dubái</div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="carrito.html"class="active">Carrito</a></li>
-            </ul>
-        </nav>
-    </header>
+  <main>
+    <div class="carrito-container">
+      <h1>Tu Carrito</h1>
 
-    <main>
-        <h1>Tu Carrito de Compras</h1>
-        
-        <!-- Tabla de productos en el carrito -->
-        <table id="tabla-carrito">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
-                    <th>Total</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Aquí se listarán los productos que el usuario haya agregado -->
-                <tr>
-                    <td>Hamburguesa</td>
-                    <td>
-                        <input type="number" value="1" min="1" class="cantidad" data-precio="11" onchange="actualizarTotal()">
-                    </td>
-                    <td>S/ 11</td>
-                    <td class="total">S/ 11</td>
-                    <td><button onclick="eliminarProducto(this)">Eliminar</button></td>
-                </tr>
-                <tr>
-                    <td>Salchipapa</td>
-                    <td>
-                        <input type="number" value="2" min="1" class="cantidad" data-precio="10" onchange="actualizarTotal()">
-                    </td>
-                    <td>S/ 10</td>
-                    <td class="total">S/ 20</td>
-                    <td><button onclick="eliminarProducto(this)">Eliminar</button></td>
-                </tr>
-                <!-- Otros productos se agregarían aquí -->
-            </tbody>
-        </table>
+      <table class="carrito-tabla">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="producto-info">
+                <img class="producto-img" src="producto1.jpg" alt="Producto 1" />
+                <span>Producto 1</span>
+              </div>
+            </td>
+            <td>S/ 25.00</td>
+            <td>
+              <div class="cantidad-control">
+                <button class="cantidad-btn">-</button>
+                <span>1</span>
+                <button class="cantidad-btn">+</button>
+              </div>
+            </td>
+            <td>S/ 25.00</td>
+            <td><span class="eliminar-btn">Eliminar</span></td>
+          </tr>
+          <!-- Puedes duplicar esta fila para más productos -->
+        </tbody>
+      </table>
 
-        <!-- Total general -->
-        <div id="total-carrito">
-            <h2>Total: <span id="total-suma">S/ 31</span></h2>
+      <div class="carrito-resumen">
+        <h3>Resumen</h3>
+        <div class="resumen-detalle">
+          <span>Subtotal</span>
+          <span>S/ 25.00</span>
         </div>
-
-        <!-- Botones para continuar -->
-        <div id="acciones">
-            <button onclick="window.location.href='index.html'">Seguir Comprando</button>
-            <button onclick="window.location.href='checkout.html'">Proceder a Checkout</button>
+        <div class="resumen-detalle">
+          <span>Envío</span>
+          <span>S/ 5.00</span>
         </div>
-    </main>
+        <div class="resumen-total">
+          <span>Total: S/ 30.00</span>
+        </div>
+        <button class="checkout-btn">Proceder al pago</button>
+      </div>
+    </div>
 
-     <!-- FOOTER -->
+    <!-- Si el carrito está vacío -->
+    <!--
+    <div class="carrito-vacio">
+      <p>Tu carrito está vacío.</p>
+      <a href="#">Volver a la tienda</a>
+    </div>
+    -->
+  </main>
+
   <footer>
     <p>&copy; 2025 Perfumería Dubái. Todos los derechos reservados.</p>
   </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
