@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="../styles/carrito.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">✨ Perfumería Dubái</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="carrito.html">Carrito 🛒</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="carrito-container">
+      <h1>Tu Carrito</h1>
+
+      <table class="carrito-tabla">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="producto-info">
+                <img class="producto-img" src="producto1.jpg" alt="Producto 1" />
+                <span>Producto 1</span>
+              </div>
+            </td>
+            <td>S/ 25.00</td>
+            <td>
+              <div class="cantidad-control">
+                <button class="cantidad-btn">-</button>
+                <span>1</span>
+                <button class="cantidad-btn">+</button>
+              </div>
+            </td>
+            <td>S/ 25.00</td>
+            <td><span class="eliminar-btn">Eliminar</span></td>
+          </tr>
+          <!-- Puedes duplicar esta fila para más productos -->
+        </tbody>
+      </table>
+
+      <div class="carrito-resumen">
+        <h3>Resumen</h3>
+        <div class="resumen-detalle">
+          <span>Subtotal</span>
+          <span>S/ 25.00</span>
+        </div>
+        <div class="resumen-detalle">
+          <span>Envío</span>
+          <span>S/ 5.00</span>
+        </div>
+        <div class="resumen-total">
+          <span>Total: S/ 30.00</span>
+        </div>
+        <button class="checkout-btn">Proceder al pago</button>
+      </div>
+    </div>
+
+    <!-- Si el carrito está vacío -->
+    <!--
+    <div class="carrito-vacio">
+      <p>Tu carrito está vacío.</p>
+      <a href="#">Volver a la tienda</a>
+    </div>
+    -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Perfumería Dubái. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
